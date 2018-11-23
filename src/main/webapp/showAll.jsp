@@ -24,7 +24,7 @@
     编号：${userList.id}
     用户名：${userList.username}
     添加时间：${userList.addtime}
-    <<br/>
+    <br/>
 </c:forEach>
 <body>
 <br>
