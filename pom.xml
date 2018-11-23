@@ -9,6 +9,7 @@
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
 
+
   <name>github-ssm Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
@@ -80,6 +81,12 @@
       <artifactId>fastjson</artifactId>
       <version>1.2.47</version>
     </dependency>
+    <!--熱部署的jar包-->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>springloaded</artifactId>
+      <version>1.2.7.RELEASE</version>
+    </dependency>
 
     <!--测试类的jar包-->
     <dependency>
@@ -94,25 +101,9 @@
     <finalName>github-ssm</finalName>
     <plugins>
       <plugin>
-        <!--引入jsp的插件-->
+        <!--jsp的插件-->
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
-        <!--热部署-->
-        <!--<dependencies>
-        <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>springloaded</artifactId>
-        <version>1.2.7.RELEASE</version>
-        </dependency>
-        </dependencies>-->
-        <!-- spring热部署 -->
-        <dependencies>
-          <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>springloaded</artifactId>
-            <version>1.2.7.RELEASE</version>
-          </dependency>
-        </dependencies>
       </plugin>
     </plugins>
   </build>

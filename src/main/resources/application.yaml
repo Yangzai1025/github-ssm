@@ -3,7 +3,7 @@ server:
   port: 8989
   jsp-servlet:
     init-parameters:
-      developments: true
+      development: true
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver

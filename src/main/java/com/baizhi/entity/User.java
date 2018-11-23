@@ -15,7 +15,28 @@ public class User implements Serializable {
     private String password;
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @JSONField(format = "yyyy-MM-dd HH:mm:ss")
-    private Date addtime;
+    private String addtime;
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id='" + id + '\'' +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", addtime='" + addtime + '\'' +
+                '}';
+    }
+
+    public User(String id, String username, String password, String addtime) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.addtime = addtime;
+    }
+
+    public User() {
+        super();
+    }
 
     public String getId() {
         return id;
@@ -41,32 +62,11 @@ public class User implements Serializable {
         this.password = password;
     }
 
-    public Date getAddtime() {
+    public String getAddtime() {
         return addtime;
     }
 
-    public void setAddtime(Date addtime) {
+    public void setAddtime(String addtime) {
         this.addtime = addtime;
-    }
-
-    public User() {
-        super();
-    }
-
-    public User(String id, String username, String password, Date addtime) {
-        this.id = id;
-        this.username = username;
-        this.password = password;
-        this.addtime = addtime;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id='" + id + '\'' +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", addtime=" + addtime +
-                '}';
     }
 }
