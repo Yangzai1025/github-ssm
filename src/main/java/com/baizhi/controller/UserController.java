@@ -18,7 +18,6 @@ public class UserController {
     public String selectAll(Map map){
         //调用业务类查询全部数据的方法
         List<User> userList = userService.selectAll();
-        System.out.println(userList);
         //将数据放入map集合中
         map.put("userList",userList);
         //返回一个字符串后跳转到展示所有数据的页面
