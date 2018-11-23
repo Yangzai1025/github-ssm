@@ -1,0 +1,24 @@
+server:
+  context-path: /github-ssm
+  port: 8989
+  jsp-servlet:
+    init-parameters:
+      developments: true
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+  http:
+    encoding:
+      charset: UTF-8
+      force: true
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+mybatis:
+  mapper-locations: com/baizhi/dao/*.xml
+  type-aliases-package: com.baizhi.entity
